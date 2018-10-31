@@ -1,0 +1,208 @@
+====================================================================================================
+
+			Keybased Authentication.
+
+====================================================================================================
+
+Base Machine : Ubuntu16.04
+VirtualBox : Ubuntu16.04(192.168.56.4)
+
+I would like to connect my virtual machine from base machine without password authentication and using hostname.
+
+
+
+Base Machine
+
+1. open and add the following lines to  .ssh/config' file.
+
+      # vim .ssh/config
+	
+	#add the below parts
+
+		Host ramani-VirtualBox
+     			HostName ramani-VirtualBox
+	     		User ramani
+         			Port 22
+         			IdentityFile /home/ramani/.ssh/id_rsa
+         			TCPKeepAlive yes
+         			IdentitiesOnly yes
+
+2. Open and add the entry in hosts file (base machine)
+
+	# sudo vim /etc/hosts
+		192.168.56.4    ramani-VirtualBox
+
+3. Now check # ssh ramani-VirtualBox  ( It will ask password)
+
+VM1(192.168.56.4)
+
+1. In vm1, create a directory
+
+	#  sudo mkdir /etc/ssh/authorized_keys
+	
+2. Copy and paste the public key of which user you want to access. (Base Machine: /home/ramani/.ssh/id_rsa.pub)
+
+	# sudo vim /etc/ssh/authorized_keys/ramani	
+
+3. check the permission of this file (644)
+
+4. Open and edit the ssh config file
+
+	# sudo vi /etc/ssh/sshd_config
+	
+	PermitRootLogin no
+	PasswordAuthentication no
+	PubkeyAuthentication yes
+	AuthorizedKeysFile /etc/ssh/authorized_keys/%u
+	Ciphers aes128-ctr,aes192-ctr,aes256-ctr
+
+5. Restart the service
+
+	# sudo systemctl restart sshd.service
+
+Base Machine
+
+Check the connection
+
+	# ssh ramani-VirtualBox(It will login without password authentication)
+
+--------------------------------------------------xxxxxxxxxxxxxxxxx------------------------------------
+
+========================================================================================================
+
+				Login with another port number
+
+=======================================================================================================
+
+VM1(192.168.56.4)
+
+1. Change port number in config file
+
+	# sudo vim /etc/ssh/sshd_config 
+
+Port 1234
+
+2. Restart the service
+
+	# sudo systemctl restart sshd.service
+
+Base Machine
+
+1. change the port in config file
+
+	# vim .ssh/config
+
+		----------
+
+		Port 1234
+
+		------
+2. Try to connect 
+
+	# ssh ramani-VirtualBox (It will connect)
+
+--------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxx--------------------------------------------
+
+
+
+=========================================================================================================
+
+					Login With another user
+
+
+=========================================================================================================
+
+
+Base Machine
+
+1. 
+
+1. Generate new key
+
+	# ssh-keygen
+Choose another location for key. Because the default location have existing key.
+Here I have mention /home/ramani/rayo/id_rsa
+
+2.  update ssh config
+
+	# sudo vim .ssh/config
+
+	Host ramani-VirtualBox
+	     HostName ramani-VirtualBox
+	     User rayo
+	         Port 1234
+	         IdentityFile /home/ramani/rayo/id_rsa
+	         TCPKeepAlive yes
+	         IdentitiesOnly yes
+
+
+
+VM1(192.168.56.4)
+
+1. Create new user 'rayo'
+
+2. copy the public key from base machine(/home/ramani/rayo/id_rsa.pub)
+
+	# sudo vim /etc/ssh/authorized_keys/rayo
+
+Base 
+
+Try to login
+
+	# ssh rayo@ramani-VirtualBox (It will login without password to rayo user)
+
+------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxx--------------------------------------------------
+
+
+=======================================================================================================
+
+					Private Key
+
+=======================================================================================================
+
+I have newly created one server in my virtual box. ip : 192.168.56.5.
+I have to try to connect 'rayo' user with keybased authentication. Already my base machine connect 'rayo' user with keybased authentication.
+'rayo' user's public and private key already placed in base machine(/home/ramani/rayo/)
+also public key placed in my vm1(192.168.56.4), location- vim /etc/ssh/authorized_keys/rayo.
+
+VM2(192.168.56.5)
+
+1. copy and paste the private key from base machine(/home/ramani/rayo/id_rsa), rayo's public key already placed in vm1
+
+	# mkdir /home/rambact/rayo
+	# vim /home/rambact/rayo/id_rsa 
+
+
+2. create ssh config file and add the below lines
+
+	# vim .ssh/config
+
+		Host ramani-VirtualBox
+             		HostName ramani-VirtualBox
+             		User rayo
+                 		Port 22
+                		IdentityFile /home/rambact/rayo/id_rsa
+                 		TCPKeepAlive yes
+                 		IdentitiesOnly yes
+
+
+3. If you want to connect with hostname add entry in hosts file in vm2 
+
+	# sudo vim /etc/hosts
+	   192.168.56.4    ramani-VirtualBox
+
+4. Change 600 permission for id_rsa file 
+
+	# ll rayo/id_rsa
+ 	# chmod 600 rayo/id_rsa
+
+5. Try to connect
+
+	# ssh rayo@ramani-VirtualBox (It will connect automatically)
+
+
+------------------------------------xxxxxxxxxxxxxxxxxxxxxxx----------------------------------------------------
+
+
+
+

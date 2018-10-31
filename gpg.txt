@@ -1,0 +1,54 @@
+1. To install gpg
+
+	# sudo apt-get install gnupg rng-tools
+
+2. To Generate Key
+
+	# gpg --gen-key
+
+3. List all keys
+
+	# gpg --list-keys
+
+4. Delete any key
+
+	# gpg --delete-secret-keys name
+
+	# gpg --delete-keys name
+
+5. create the file
+
+	# vim /home/admin/Documents/notes
+
+6. Encrypt the File
+
+	# gpg -e -r name /home/admin/Documents/notes
+
+After executing this command notes.gpp file was automatically created.
+
+7. remove the original file
+
+	# rm -rf /home/admin/Documents/notes
+
+8. Decrypt the file
+
+	# gpg /home/admin/Documents/notes.gpg
+
+9. Decrypt the file using gvim
+
+	# apt-get install vim-gtk
+
+10. Download the plugin file gnupg.vim from http://www.vim.org/scripts/download_script.php?src_id=24199
+
+11. Create the directory
+
+	# mkdir /home/user_name/.vim/plugin -p
+
+12. Paste the gnupg.vim file to that location.
+
+	# cp /home/user_name/Downloads/gnupg.vim /home/admin/.vim/plugin/
+
+13. open the file using gvim
+
+	# gvim  /home/user_name/Documents/notes.gpg
+

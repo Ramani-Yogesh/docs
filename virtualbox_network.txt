@@ -1,0 +1,45 @@
+====================================================================================
+
+		Setup Static Ip to VM
+
+====================================================================================
+
+1. Stop the virtual machine and then go to file option.
+2. Choose host-network-manager and create host-network in this disable dhcp server.
+3. Then go to settings and choose network option.
+4. From adapter1 choose host-only adapter.
+5. Then choose vboxnet0 in name section. Then click ok.
+6. Enable network adapter2 and choose NAT and click ok.
+7. Start the vm and check available adapter list from command line
+
+	sudo ls /sys/class/net/
+
+Then edit interface file to set static ip for vm
+	
+	sudo vim /etc/network/interfaces
+
+Enter below details in interfaces file
+
+	auto lo
+	iface lo inet loopback
+	# The primary network interface, Host-only adapter
+
+	auto enp0s3
+	iface enp0s3 inet static #change from dhcp to static
+	address 192.168.56.20 #static IP of this VM
+	netmask 255.255.255.0
+	network 192.168.56.0
+	broadcast 192.168.56.255
+
+# NAT dhcp adapter
+
+	auto enp0s8
+	iface enp0s8 inet dhcp
+
+
+Save the file and restart network.
+
+	sudo /etc/init.d/networking restart
+
+8. Then reboot the vm and then check with ping if network is available or not.
+

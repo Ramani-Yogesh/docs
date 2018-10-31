@@ -1,0 +1,80 @@
+1.Install Git
+
+	# apt-get install git
+
+2. Set username and email
+
+	# git config --global user.name "Sam Smith"
+	# git config --global user.email sam@example.com
+
+3. show the details
+
+	# git config --list
+
+4. Create a new directory and change into that location.
+ Create a new local repository
+	# mkdir /var/www/html/project
+	# cd /var/www/html/project	
+	# git init
+(It creates .git directory)
+
+5. clone the repository
+
+	# git clone repository_path
+
+6. change your project location and create files
+
+	# cd location
+	# touch file{1..5}.php
+
+7. Add the files
+
+	# git add *
+
+8. Commit the changes
+
+	# git commit -m "first commit"
+
+9. push into the repository
+
+	# git push origin master
+
+10. If we create any files in bitbucket, pull it.
+
+	# git pull origin master
+
+11. Check git status
+
+	# git status
+
+12. To create a new branch
+
+	# git branch branch_name
+
+13. check branch details
+
+	# git branch -a
+
+14. change one branch to another
+
+	# git checkout branch_name
+
+15. To delete the branch
+
+	# git branch -d branch_name
+
+16. Connect remote repository
+
+	# git remote add origin _url_
+	
+17. check the remote repository 
+
+	# git remote -v
+
+18. To store the git password
+
+	# git config credential.helper store
+
+then excute push or pull command, first time it will ask the password and then next time it will not ask password
+(This password stored in the home directory example., # vim /root/.git-credentials
+

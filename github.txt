@@ -1,0 +1,101 @@
+=================================================================================================
+
+				Connect GitHub using SSH
+
+=================================================================================================
+
+
+1. Create ssh config file in your system and add the below lines.
+
+	# vim ~/.ssh/config
+
+		Host github.com
+                        HostName github.com
+                        User git
+                                Port 22
+                                IdentityFile /home/ramani/.ssh/id_rsa
+                                TCPKeepAlive yes
+                                IdentitiesOnly yes
+
+2. Copy your public key and paste into github account.
+
+	#  cat .ssh/id_rsa.pub 
+
+3. Try to connect
+
+	# ssh github.com 
+
+It shows the following message.
+
+PTY allocation request failed on channel 0
+Hi Ramani-Yogesh! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+
+------------------------------------xxxxxxxxxxxxxxxxxxxxxxxx-----------------------------------------
+
+=====================================================================================================
+
+				Working with github 
+
+=====================================================================================================
+
+1. Install git
+
+	# sudo apt install git
+
+2. Set username and email
+
+	# git config --global user.name "Sam Smith"
+	# git config --global user.email sam@example.com
+
+
+3.  Create a new directory and change into that location.
+ 
+	# mkdir /home/ramani/python
+
+	# cd /home/ramani/python/
+
+4. clone your respository. copy your link from github account
+
+	# git clone git@github.com:Ramani-Yogesh/python.git
+
+5. list your repository and change into location, and check your .git directory is present
+
+	# ls
+
+	# cd python/
+
+	# ll
+
+6. Check git status
+
+	# git status
+
+7. Create or copy already working files to that location, then check git status
+
+	# git status
+
+8. add files to git
+
+	# git add .
+
+9. Commit all changes
+
+	# git commit -m "my_files1"
+
+10. Push your changes
+
+	# git push origin master
+
+11. Now check git status
+
+	# git status
+
+12. Refresh the github account. now it shows the all files.
+
+13. create a new file in that repository in github, then run
+
+	# git pull origin master
+
+---------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxx---------------------------------------
+
