@@ -24,7 +24,7 @@
 
 	# gpg -e -r name /home/admin/Documents/notes
 
-After executing this command notes.gpp file was automatically created.
+After executing this command 'notes.gpp' file was automatically created.
 
 7. remove the original file
 
