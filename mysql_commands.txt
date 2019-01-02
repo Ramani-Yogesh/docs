@@ -1,0 +1,133 @@
+	Table Creation:
+
+create table emp_details ( emp_id int(10) not null primary key, emp_type varchar(20) not null, emp_name varchar(30) not null, join_data int(20) not null );
+
+==================================================
+
+	Insert:
+
+insert into emp_details (emp_id,emp_type,emp_name,join_data) values (5010,'permanent','user1','20');
+
+==================================================
+
+	Alter Table
+
+alter table emp_details modify join_data varchar(20);
+
+alter table emp_details change join_data join_date varchar(30);
+
+alter table emp_details drop join_date;
+
+alter table emp_details add  join_date varchar(30);
+
+==================================================
+
+	Update Table:
+
+update  emp_details set join_date = 'march20' where join_date = 20;
+
+update  emp_details set join_date = '20/03/2018' where join_date = 'march20';
+
+
+========================================================
+
+	Create User:
+
+create user 'username@host' identified by 'password';
+
+use mysql;
+
+select * from user;
+
+(Here you can view the users)
+
+=======================================================
+
+	Grant Permissions
+
+grant all privileges on user_backup.emp_details to 'rama@host';
+
+grant all privileges on user_backup.* to 'rama@host';
+
+grant all privileges on *.* to 'rama@host';
+
+=======================================================
+
+	Revoke Permissions
+
+revoke all privileges on user_backup.emp_details from 'rama@host';
+
+revoke  all privileges on user_backup.* from 'rama@host';
+
+revoke all privileges on *.* from 'rama@host';
+
+========================================================
+
+	Drop User
+
+drop user rama;
+
+========================================================
+
+	Database Backup
+
+mysqldump -u username -p databasename >  databasename.sql
+
+mysqldump -u username -p --databases  database1 database2  > database1_database2.sql
+
+mysqldump -u username -p  --all-databases > alldatabases.sql
+
+==========================================================
+
+	Restore Database
+
+mysql -u username -p databasename  < databasename.sql
+
+If we are trying to restore a single database from dump of all the databases, we have to let mysql know like this:
+
+mysql -u username -p --one-database databasename < alldatabases.sql
+
+If we want to restore entire database follow this command
+
+mysql -u username -p < alldatabases.sql
+
+===========================================================
+
+	Reset Password
+
+sudo /etc/init.d/mysql stop
+
+sudo mkdir /var/run/mysqld
+
+sudo chown mysql /var/run/mysqld/
+
+sudo mysqld_safe --skip-grant-tables &
+
+sudo mysql -u root
+
+> use mysql;
+
+> update user set authentication_string=PASSWORD("New_Passwore_Here") where User='root';
+
+> flush privileges;
+
+> exit;
+
+sudo /etc/init.d/mysql stop
+
+sudo /etc/init.d/mysql start
+
+mysql -u root -p
+
+----------------------------------------------------------------
+
+ps -ef |grep mysql
+(kill the all mysql process)
+
+sudo kill -9 process_id
+
+sudo /etc/init.d/mysql start
+
+mysql -u root -p
+
+============================================================
