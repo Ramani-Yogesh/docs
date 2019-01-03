@@ -1,5 +1,9 @@
 ===================================================
 
+	Mysql
+
+===================================================
+
 	Ubuntu18.04_Mysql
 
 1. Install Mysql server
@@ -32,7 +36,7 @@ It will ask the password. Before this process, mysql entered without password.
 
 ===================================================
 
-Table Creation:
+	Table Creation:
 
 create table emp_details ( emp_id int(10) not null primary key, emp_type varchar(20) not null, emp_name varchar(30) not null, join_data int(20) not null );
 
@@ -102,6 +106,29 @@ revoke all privileges on *.* from 'rama@host';
 drop user rama;
 
 ========================================================
+
+	Copy Entire Database
+
+Source Server: 
+
+1. sudo /etc/init.d/mysql stop
+2. mkdir mysql_backup_03-01-2019
+3. sudo cp /var/lib/mysql/ mysql_backup_03-01-2019/ -rf
+4. sudo rsync -avz mysql_backup_03-01-2019/mysql ramani@192.168.56.3:/home/ramani
+
+Destination Server:
+
+1. sudo /etc/init.d/mysql stop
+2. sudo cp -rfv mysql/*  /var/lib/mysql/
+3. sudo chown -R mysql:mysql /var/lib/mysql
+4. sudo /etc/init.d/mysql start
+5. mysql -u root -p
+(Here it will ask your source mysql's password.)
+
+	> show databases;
+
+(Check all the databases are there.)
+=========================================================
 
 	Database Backup
 
