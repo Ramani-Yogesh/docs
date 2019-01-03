@@ -1,9 +1,43 @@
-	Table Creation:
+===================================================
+
+	Ubuntu18.04_Mysql
+
+1. Install Mysql server
+
+		sudo apt install mysql-server
+
+(Now run 'sudo mysql -u root -p', it will not ask the password.
+
+2. When the installation is complete, run a simple security script that comes pre-installed with MySQL which will remove some dangerous defaults and lock down access to your database system. Start the interactive script by running: 
+
+		sudo mysql_secure_installation
+
+This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
+
+If you answer “yes”, you'll be asked to select a level of password validation. Keep in mind that if you enter 2 for the strongest level, you will receive errors when attempting to set any password which does not contain numbers, upper and lowercase letters, and special characters, or which is based on common dictionary words.
+
+3. Change the Password:
+
+		sudo mysql
+		> SELECT user,authentication_string,plugin,host FROM mysql.user;
+		> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+		> FLUSH PRIVILEGES;
+		> exit;
+
+4. Check the Mysql Server:
+
+		mysql -u root -p
+
+It will ask the password. Before this process, mysql entered without password.
+
+===================================================
+
+Table Creation:
 
 create table emp_details ( emp_id int(10) not null primary key, emp_type varchar(20) not null, emp_name varchar(30) not null, join_data int(20) not null );
 
 ==================================================
-
+ 
 	Insert:
 
 insert into emp_details (emp_id,emp_type,emp_name,join_data) values (5010,'permanent','user1','20');
@@ -131,3 +165,4 @@ sudo /etc/init.d/mysql start
 mysql -u root -p
 
 ============================================================
+
