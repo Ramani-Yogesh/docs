@@ -101,6 +101,12 @@ revoke all privileges on *.* from 'rama@host';
 
 ========================================================
 
+	Check User Privileges
+
+show grants for user_name;
+
+=========================================================
+
 	Drop User
 
 drop user rama;
@@ -154,6 +160,93 @@ mysql -u username -p < alldatabases.sql
 
 ===========================================================
 
+	Change mysql default directory
+
+1. Check the mysql datadir path
+
+		# mysql -u root -p
+
+mysql> select @@datadir;
++-------------------+
+| @@datadir         |
++-------------------+
+| /var/lib/mysql/ |
++-------------------+		 
+
+2. Stop the mysql service.
+
+		# sudo /etc/init.d/mysql stop
+
+3. Create a new directory for mysql 
+
+		# sudo mkdir /mysql_vol
+
+4. Copy the files from old location to new location
+
+		# sudo rsync -avz /var/lib/mysql /mysql_vol/
+
+5. Check the ownership and permissions of new directory
+
+		# sudo ls -ld /mysql_vol/mysql/
+
+6. Configuring AppArmor Access Control Rules
+
+We’ll need to tell AppArmor to let MySQL write to the new directory by creating an alias between the default directory and the new location. To do this, edit the AppArmor alias file:
+
+		# sudo vim /etc/apparmor.d/tunables/alias
+		
+		.............
+
+		alias /var/lib/mysql/ -> /mysql_vol/mysql/,
+
+		.............
+
+
+7.  Restart the apparmor service.
+
+		# sudo systemctl restart apparmor.service
+
+8. Change the datadir path in mysql configuration file
+
+Find the line that begins with "datadir=" and change the path which follows to reflect the new location.
+
+		# sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+		...................
+
+		...................
+
+		datadir = /mysql_vol/mysql
+
+		..................
+
+9. Then start the mysql service. 
+
+		# sudo systemctl start mysql.service
+
+10. Check the datadir path & create new database for testing
+
+		# mysql -u root -p
+
+mysql> select @@datadir;
++-------------------+
+| @@datadir         |
++-------------------+
+| /mysql_vol/mysql/ |
++-------------------+
+
+mysql> create database my_database;
+
+mysql> exit
+
+11. Check the newly created database is stored in new location
+
+		# sudo ls /mysql_vol/mysql/
+
+
+
+===========================================================
+
 	Reset Password
 
 sudo /etc/init.d/mysql stop
@@ -191,5 +284,5 @@ sudo /etc/init.d/mysql start
 
 mysql -u root -p
 
-============================================================
+===============================================================
 
