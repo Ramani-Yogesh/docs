@@ -7,6 +7,16 @@
 	# git config --global user.name "Sam Smith"
 	# git config --global user.email sam@example.com
 
+Omit "--global" to set the identity only on particular repository.
+
+	# git config user.name "Sam Smith"
+	# git config user.email sam@example.com
+
+Remove config entry.
+
+	# git config --global --unset user.name
+	# git config --global --unset user.email
+
 3. show the details
 
 	# git config --list
