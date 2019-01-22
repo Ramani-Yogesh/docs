@@ -41,6 +41,10 @@ Remove config entry.
 
 	# git add *
 
+Remove the files.
+
+	# git rm s1_blackline.sh (Then commit, and push the changes, then only the file will delete)
+
 8. Commit the changes
 
 	# git commit -m "first commit"
