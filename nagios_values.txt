@@ -1,0 +1,33 @@
+==================================================================
+
+		Nagios Load Value Calculation
+
+==================================================================
+
+1. If we want to calculate the load value from percentage
+
+I we want to monitor the CPU usage with threshold
+
+w = 75%, 70%, 65%
+c = 85%, 80%, 75%
+
+formula:
+y = c * p /100
+
+y = nagios value
+c = core number
+p = targeted percentages (etc : 75)
+
+Example: i need a load value for 75% of core 16 so y = 16 * 75 / 100 = 12===> 12 is a load value of 75%
+
+
+2. If we want to calculate the percentage from load value
+
+p = 100 * load / cpu
+
+p = percentage
+load = our cpu load value
+cpu = core number
+
+Example: I need a percentage for load = 12 of core 16, so p = 100 * 12 / 16 = 75 ======> 75% is a percentage of load value 12
+
