@@ -58,3 +58,16 @@ After executing this command 'notes.gpp' file was automatically created.
 
 	# gvim  /home/user_name/Documents/notes.gpg
 
+14. To change the existing key password
+
+	# gpg --edit-key 9AABBCD8 ========Key_id
+
+gpg> passwd 
+
+(First enter the old password, then put new password)
+
+gpg> save 
+
+
+
+
