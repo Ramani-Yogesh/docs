@@ -7,7 +7,7 @@
 
         -------
         -------
-        deb http://us.archive.ubuntu.com/ubuntu/ bionic main universe
+        deb http://in.archive.ubuntu.com/ubuntu/ bionic main universe
         
 2. Update the package list
 
