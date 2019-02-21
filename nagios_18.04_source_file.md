@@ -17,6 +17,6 @@
 
         sudo apt-get install nagios-nrpe-server nagios-plugins
         
-4. Check the plugins are installed or not
+4. Check the plugins are installed
 
         ls /usr/lib/nagios/plugins/
