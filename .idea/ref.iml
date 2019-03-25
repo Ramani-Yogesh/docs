@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="module" module-name="crystal" />
+    <orderEntry type="module" module-name="checklist" />
+    <orderEntry type="module" module-name="python" />
+    <orderEntry type="module" module-name="files" />
+    <orderEntry type="module" module-name="shell_script" />
+    <orderEntry type="module" module-name="unix_notes" />
+    <orderEntry type="module" module-name="developers_notes" />
+    <orderEntry type="module" module-name="developers_notes" />
+    <orderEntry type="module" module-name="unix_notes" />
+    <orderEntry type="module" module-name="shell_script" />
+  </component>
+</module>

@@ -1,0 +1,29 @@
+=========================================================
+
+Apache2.2 Installation in Ubuntu14.04
+
+=========================================================
+
+
+1. sudo apt install ssl-cert
+2. sudo apt install apache2.2-bin
+3. add source link
+
+deb http://archive.ubuntu.com/ubuntu precise main restricted universe
+deb http://archive.ubuntu.com/ubuntu precise-updates main restricted universe
+deb http://security.ubuntu.com/ubuntu precise-security main restricted universe multiverse
+
+and update the package list.
+
+4. sudo apt install apache2.2-bin=2.2.22-1ubuntu1.11
+5. sudo apt-get install apache2.2-common=2.2.22-1ubuntu1.11
+6. sudo apt install apache2-mpm-worker=2.2.22-1ubuntu1.11
+7. check the version
+
+apache2 -v
+8. Check the service
+
+sudo /etc/init.d/apache2 status
+
+
+ 

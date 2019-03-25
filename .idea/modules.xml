@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/checklist/.idea/checklist.iml" filepath="$USER_HOME$/PycharmProjects/checklist/.idea/checklist.iml" />
+      <module fileurl="file://$USER_HOME$/perfios/code/crystal/.idea/crystal.iml" filepath="$USER_HOME$/perfios/code/crystal/.idea/crystal.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/developers_notes_vikash/.idea/developers_notes.iml" filepath="$USER_HOME$/Documents/developers_notes_vikash/.idea/developers_notes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../docker/docker_files/.idea/files.iml" filepath="$PROJECT_DIR$/../docker/docker_files/.idea/files.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/python/.idea/python.iml" filepath="$USER_HOME$/PycharmProjects/python/.idea/python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ref.iml" filepath="$PROJECT_DIR$/.idea/ref.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../shell_script/.idea/shell_script.iml" filepath="$PROJECT_DIR$/../shell_script/.idea/shell_script.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/unix_notes_vikash/.idea/unix_notes.iml" filepath="$USER_HOME$/Documents/unix_notes_vikash/.idea/unix_notes.iml" />
+    </modules>
+  </component>
+</project>
