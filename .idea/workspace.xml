@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03e193e4-71fe-48fb-8f50-e55e5a3feb3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nagios_values.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/rhel_6_7_diff.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shell_script/s15_nagios_load_value_calculation.sh" beforeDir="false" />
+      <change beforePath="$USER_HOME$/perfios/code/crystal/docs/monitoring.md" beforeDir="false" afterPath="$USER_HOME$/perfios/code/crystal/docs/monitoring.md" afterDir="false" />
+      <change beforePath="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/fantail-and-pintail/files/ssh-config-owl" beforeDir="false" afterPath="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/fantail-and-pintail/files/ssh-config-owl" afterDir="false" />
+      <change beforePath="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/fantail-and-pintail/files/ssh-config-vikash" beforeDir="false" afterPath="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/fantail-and-pintail/files/ssh-config-vikash" afterDir="false" />
+      <change beforePath="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/sbicardapi.perfios.com/README.md" beforeDir="false" afterPath="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/api02.dc01.in.perfios.com/README.md" afterDir="false" />
+      <change beforePath="$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md" beforeDir="false" afterPath="$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/perfios/code/crystal/docs/monitoring.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SECOND">
-              <first_editor relative-caret-position="2445">
-                <caret line="163" column="36" selection-start-line="163" selection-start-column="36" selection-end-line="163" selection-end-column="36" />
+              <first_editor relative-caret-position="2460">
+                <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rhel_6_7_diff.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor>
+                <caret column="41" selection-start-column="41" selection-end-column="41" />
               </first_editor>
               <second_editor />
             </state>
@@ -35,8 +53,8 @@
         <entry file="file://$USER_HOME$/Documents/server_inventory/february_2019/server_inventory.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SECOND">
-              <first_editor relative-caret-position="555">
-                <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+              <first_editor relative-caret-position="1695">
+                <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
               </first_editor>
               <second_editor />
             </state>
@@ -47,8 +65,8 @@
         <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SECOND">
-              <first_editor relative-caret-position="180">
-                <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+              <first_editor relative-caret-position="300">
+                <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               </first_editor>
               <second_editor />
             </state>
@@ -68,13 +86,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/perfios/code/crystal" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-4-servers/jobtest01.perfios.com/README.md" />
-        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/chinkara/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/cuckoo/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/emu/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/local-servers/finch/README.md" />
@@ -103,7 +119,6 @@
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-singapore/dbserver01.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-singapore/dbserver02.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-singapore/icici.perfios.com/README.md" />
-        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md" />
         <option value="$USER_HOME$/Documents/server_inventory/february_2019/servers_list.md" />
         <option value="$USER_HOME$/Documents/server_inventory/february_2019/servers startup and shutdown schedule.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/sbicarddemo.perfios.com/README.md" />
@@ -119,11 +134,14 @@
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-4-servers/demo-servers/demo22.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-4-servers/demo-servers/demo23.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/aws-4-servers/demo-servers/demo20.perfios.com/README.md" />
-        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/db03.dc01.in.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/app02.dc01.in.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/web02.dc01.in.perfios.com/README.md" />
         <option value="$USER_HOME$/perfios/code/crystal/docs/monitoring.md" />
         <option value="$USER_HOME$/Documents/server_inventory/february_2019/server_inventory.md" />
+        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/api02.dc01.in.perfios.com/README.md" />
+        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/db03.dc01.in.perfios.com/README.md" />
+        <option value="$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md" />
+        <option value="$PROJECT_DIR$/rhel_6_7_diff.md" />
       </list>
     </option>
   </component>
@@ -145,6 +163,10 @@
           <expand>
             <path>
               <item name="ref" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ref" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ref" type="b2602c69:ProjectViewProjectNode" />
               <item name="crystal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -160,6 +182,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/server_user_details/2019-03-09--unix-aws-servers-users-report.md" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -289,9 +312,9 @@
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49425286" weight="0.15905339" />
-      <window_info id="Structure" order="1" sideWeight="0.5023256" side_tool="true" weight="0.25178146" />
-      <window_info id="Favorites" order="2" sideWeight="0.50574714" side_tool="true" weight="0.18161805" />
+      <window_info id="Structure" order="0" sideWeight="0.5023256" side_tool="true" weight="0.25178146" />
+      <window_info id="Favorites" order="1" sideWeight="0.50574714" side_tool="true" weight="0.18161805" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49425286" weight="0.15905339" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.39916405" />
@@ -332,16 +355,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/aws-1-servers/innovations.perfios.com/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/aws-1-servers/webserver01.in.perfios.com/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -625,16 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/sbicardapi.perfios.com/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="31" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="31" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/sbicardjobserver01.perfios.com/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -745,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/db03.dc01.in.perfios.com/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/app02.dc01.in.perfios.com/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -775,11 +768,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md">
+    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/api02.dc01.in.perfios.com/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/sbicards-servers/db03.dc01.in.perfios.com/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
-            <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           </first_editor>
           <second_editor />
         </state>
@@ -788,8 +791,18 @@
     <entry file="file://$USER_HOME$/Documents/server_inventory/february_2019/server_inventory.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
-          <first_editor relative-caret-position="555">
-            <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <first_editor relative-caret-position="1695">
+            <caret line="113" column="98" selection-start-line="113" selection-start-column="98" selection-end-line="113" selection-end-column="98" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/perfios/code/crystal/servers_inventory/squid-proxy-servers/server-ip-list-for-whitelisting.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           </first_editor>
           <second_editor />
         </state>
@@ -798,8 +811,18 @@
     <entry file="file://$USER_HOME$/perfios/code/crystal/docs/monitoring.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
-          <first_editor relative-caret-position="2445">
-            <caret line="163" column="36" selection-start-line="163" selection-start-column="36" selection-end-line="163" selection-end-column="36" />
+          <first_editor relative-caret-position="2460">
+            <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rhel_6_7_diff.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="41" selection-start-column="41" selection-end-column="41" />
           </first_editor>
           <second_editor />
         </state>
