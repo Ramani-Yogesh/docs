@@ -4,5 +4,8 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../shell_script" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/python" vcs="Git" />
+    <mapping directory="$USER_HOME$/perfios/code/crystal" vcs="Git" />
+    <mapping directory="$USER_HOME$/perfios/code/dbops" vcs="Git" />
+    <mapping directory="$USER_HOME$/perfios/code/sysadmin" vcs="Git" />
   </component>
 </project>

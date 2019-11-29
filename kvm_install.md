@@ -106,4 +106,6 @@ Save and close the file
 
      virsh resume vm_name
 
+*To autostart the vm when host is up*
 
+     sudo virsh autostart vm_name

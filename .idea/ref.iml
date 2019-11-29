@@ -16,5 +16,10 @@
     <orderEntry type="module" module-name="developers_notes" />
     <orderEntry type="module" module-name="unix_notes" />
     <orderEntry type="module" module-name="shell_script" />
+    <orderEntry type="module" module-name="dbops" />
+    <orderEntry type="module" module-name="sysadmin" />
+    <orderEntry type="module" module-name="crystal" />
+    <orderEntry type="module" module-name="crystal" />
+    <orderEntry type="module" module-name="crystal" />
   </component>
 </module>

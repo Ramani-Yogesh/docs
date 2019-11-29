@@ -1,0 +1,73 @@
+#!/bin/bash
+# Description
+# plp backup restoration
+
+# Basic variables
+shopt -s expand_aliases
+zip_file=plp.sql.gz
+sql_file=plp.sql
+db_name=plp
+folder_path=/perfios/plp_daily_data_dump/
+log_file_name=load_plp_data.log
+
+slack_notification () {
+# Slack notification
+SLACK_P1_ALERTS=https://hooks.slack.com/services/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
+SLACK_DB_ALERTS=https://hooks.slack.com/services/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
+SLACK_MESSAGE="(GODWIT: SG-plp_daily_data_dump $status)"
+curl -X POST --data "payload={\"text\": \"${SLACK_ICON} ${SLACK_MESSAGE}\"}" ${SLACK_P1_ALERTS}
+curl -X POST --data "payload={\"text\": \"${SLACK_ICON} ${SLACK_MESSAGE}\"}" ${SLACK_DB_ALERTS}
+}
+
+cd "${folder_path}"
+# Check the mysql file exists
+if [ -f "${sql_file}" ]; then
+   rm -f "${sql_file}"
+   if [ -f "${zip_file}" ]; then
+        gunzip -c "${zip_file}" > "${db_name}".sql
+   else
+	status="Failed due to zip file is not present"
+        slack_notification
+        exit 2
+   fi
+else
+    if [ -f "${zip_file}" ]; then
+        gunzip -c "${zip_file}" > "${db_name}".sql
+    else
+        status="Failed due to zip file is not present"
+        slack_notification
+        exit 2
+    fi
+fi
+
+# Get the sql information
+sql_date=$(timeout 3s tail -f -n1 "${sql_file}"  | awk '{ print $5}')
+sql_month=$(echo "${sql_date}" | cut -c 6-7)
+sql_day=$(echo "${sql_date}" | cut -c 9-10)
+current_month=$(date '+%F' | cut -c 6-7)
+current_day=$(date '+%F' | cut -c 9-10)
+
+
+# Assign basic initialization
+alias my='mysql -hlocalhost -uroot -pRe@chS1lkBo@rd'
+alias myp='mysql -hlocalhost -uroot -pRe@chS1lkBo@rd -D${db_name}'
+
+# backup restoration part
+if [ "${sql_day}" == "${current_day}" ]  &&  [ "${sql_month}" == "${current_month}" ]; then
+   echo "`date '+%F %T'`: Starting dataload."  >> "${folder_path}"/"${log_file_name}"
+   status="started"
+   slack_notification
+   # Drop and create database
+   my -e "drop database if exists $db_name"
+   my -e "create database $db_name"
+   myp < $sql_file
+   status="completed"
+   echo "`date '+%F %T'`: Finished dataload."  >> "${folder_path}"/"${log_file_name}"
+   slack_notification
+   exit 1
+else
+   status="failed due to date mis match of the coppied file"
+   slack_notification
+   exit 0
+fi
+
